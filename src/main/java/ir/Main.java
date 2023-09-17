@@ -1,5 +1,6 @@
 package ir;
 
+import ir.calculate.Calculate;
 import ir.modals.Person;
 
 import java.io.FileWriter;
@@ -20,7 +21,7 @@ public class Main {
             person = file.skip(1)
                     .map(i -> {
                         String[] s = i.split(",");
-                        return new Person(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8], s[9]);
+                        return new Person(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8], s[9] );
                     }).toList();
         } catch (IOException e) {
             e.printStackTrace();
@@ -52,7 +53,8 @@ public class Main {
         }*/
 
 
-
+        //Calculate and print the average salary of all Person objects in the list.
+        /*System.out.println("average Salary is : " + Calculate.averageSalary(person));*/
 
     }
 }
