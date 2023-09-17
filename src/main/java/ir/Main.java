@@ -2,6 +2,7 @@ package ir;
 
 import ir.modals.Person;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -24,6 +25,31 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        //Person objects to include only those where the age is between 25 and 32(inclusive)
+/*        person.stream()
+                .filter(i -> Integer.parseInt(i.getAge()) >= 25 && Integer.parseInt(i.getAge()) <= 32)
+                .forEach(System.out::println);*/
+
+
+
+
+        // Map the filtered list to new list and write PersonsEmailAddresses.txt file
+/*        List<String> emails = person.stream()
+                .map(i -> i.getEmail())
+                .sorted()
+                .toList();
+
+        try (FileWriter fw = new FileWriter("PersonsEmailAddresses.txt" )){
+            for (String s: emails) {
+                fw.write(s);
+                fw.append("\n");
+            }
+            fw.flush();
+        }catch (IOException e){
+            e.printStackTrace();
+        }*/
 
 
 
